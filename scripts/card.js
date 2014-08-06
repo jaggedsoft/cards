@@ -1,6 +1,6 @@
 define(['utils'], function (Utils) {
 
-  var CARDS = ['two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king'];
+  var CARDS = ['two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king', 'ace'];
 
   var Card = function (suit, number) {
     this.suit = suit;
