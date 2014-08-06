@@ -1,4 +1,4 @@
-define([], function () {
+define(['utils'], function (Utils) {
 
   var CARDS = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king'];
 
@@ -10,7 +10,7 @@ define([], function () {
 
   Card.prototype.toString = function() {
     // 'Jack of Clubs', '5 of Hearts'
-
+    return Utils.capitalize(this.value) + " of " + Utils.capitalize(this.suit);
   };
 
   Card.prototype.compare = function () {
