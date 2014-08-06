@@ -5,10 +5,9 @@ define(['card'], function (Card) {
   var Deck = function () {
     this.cards = [];
     for(var i = 2; i <= 14; i++){
-        for(var x = 0; x <= suits.length - 1; x++){
-            var card = new Card(suits[x], i);
-            this.cards.push(card);
-        }
+      _.each(suits, function (suit) {
+        this.cards.push(new Card(suit, i));
+      }, this);
     }
   };
 
