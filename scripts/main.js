@@ -3,14 +3,28 @@ require(['card', 'deck'], function (Card, Deck) {
   var deck1 = new Deck();
   deck1.shuffle();
 
-  var hand = deck1.deal(10);
-  console.log(hand);
+  var player = deck1.deal(26);
+  var enemy  = deck1.deal(26);
 
-  _.each(deck1.cards, function (card){
-    // try{
-      console.log(card.toString());
-    // } catch(e) {
-      // console.log('error ' + card);
-    // }
-  })
+  console.log(player);
+  console.log(enemy);
+  console.log(deck1.cards.length);
+
+  while(player.length){
+    var playerCard = player.pop();
+    var enemyCard  = enemy.pop();
+
+    // Who wins
+    console.log(playerCard + ' vs ' + enemyCard);
+
+    if(playerCard.number > enemyCard.number){
+      console.log(playerCard + ' wins');
+    } else {
+      console.log(enemyCard + ' wins');
+    }
+
+    deck1.cards.push(playerCard, enemyCard);
+  }
+
+  console.log(deck1.cards.length);
 });
