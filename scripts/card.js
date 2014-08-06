@@ -1,11 +1,11 @@
 define(['utils'], function (Utils) {
 
-  var CARDS = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king'];
+  var CARDS = ['two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king'];
 
   var Card = function (suit, number) {
     this.suit = suit;
     this.number = number;
-    this.value = CARDS[number-1];
+    this.value = CARDS[number-2];
   };
 
   Card.prototype.toString = function() {
